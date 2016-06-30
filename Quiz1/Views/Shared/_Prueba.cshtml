@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Quiz1.Models.ViewModel>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proyecto.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Proyecto.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Proyecto.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Proyecto.Id })
+            </td>
+        </tr>
+    }
+
+</table>
